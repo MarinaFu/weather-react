@@ -1,6 +1,7 @@
 import "./styles.css";
 import React, { useState } from "react";
 import axios from "axios";
+import Search from "./search";
 
 export default function Weather() {
   let weatherData = {
@@ -34,21 +35,6 @@ export default function Weather() {
                 <li>{weatherData.description}</li>
               </ul>
             </h5>
-            <form className="searching-engine">
-              <div className="searching-engine">
-                <label for="search"></label>
-                <input
-                  type="search"
-                  className="form-control"
-                  id="inputSearch"
-                  placeholder="Search city"
-                  autocomplete="off"
-                  autofocus="on"
-                />{" "}
-              </div>
-              <input type="submit" value="Search" className="Go" />
-              <button> Current Location </button>
-            </form>
           </div>
         </div>
       </div>
