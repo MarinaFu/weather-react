@@ -9,7 +9,7 @@ export default function Weather() {
       <div className="page">
         <div className="card top-card">
           <div className="card-body">
-            <Search />
+            <Search defaultCity="Amsterdam" />
           </div>
         </div>
       </div>

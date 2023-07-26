@@ -1,54 +1,70 @@
 import "./styles.css";
 import React, { useState } from "react";
+import WeatherInfo from "./WeatherInfo";
+
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 
-export default function Search() {
-  let [city, setCity] = useState("");
-  let [searchResult, setsearchResult] = useState("");
+export default function Search(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
-  function handleSubmit(response) {
-    let weather = {
-      temperature: Math.round(response.data.temperature.current),
-      description: response.data.condition.description,
+  function handleResponse(response) {
+    console.log(response.data);
+    setWeatherData({
+      ready: true,
+      coordinates: response.data.coord,
+      temperature: response.data.main.temp,
+      humidity: response.data.main.humidity,
+      date: new Date(response.data.dt * 1000),
+      description: response.data.weather[0].description,
+      icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
-      humidity: response.data.temperature.humidity,
-      icon: response.data.condition.icon_url,
-    };
-    setsearchResult(
-      <ul>
-        <li>Temperature: {weather.temperature}°C</li>
-        <li>Description: {weather.description} </li>
-        <li>Humidity: {weather.humidity}%</li>
-        <li>Wind: {weather.wind} km/h</li>
-        <li>
-          {" "}
-          <img src={weather.icon} alt="icon"></img>
-        </li>
-      </ul>
-    );
-  }
-  function showDetails(event) {
-    event.preventDefault();
-    let apiKey = "a49f0cad903e09dc8e1t8o40aab88ab3";
-    let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
-    axios.get(url).then(handleSubmit);
+      city: response.data.name,
+    });
   }
 
-  function updateCity(event) {
+  function search() {
+    const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+    console.log(apiUrl);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
     setCity(event.target.value);
   }
-  return (
-    <div className="searching-engine">
-      <form onSubmit={showDetails}>
-        <input
-          type="text"
-          placeholder="Enter a city..."
-          autoFocus={false}
-          onChange={updateCity}
-        />
-        <input type="submit" value="Search" />
-      </form>
-      <h2>{searchResult}</h2>
-    </div>
-  );
+
+  if (weatherData.ready) {
+    return (
+      <div className="Weather">
+        <form className="search" onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-9">
+              <input
+                type="search"
+                placeholder="Enter a city.."
+                className="form-control"
+                autoFocus="on"
+                onChange={handleCityChange}
+              />
+            </div>
+            <div className="col-3">
+              <input type="submit" value="Search" className="btn btn-primary" />
+            </div>
+          </div>
+        </form>
+        <WeatherInfo data={weatherData} />
+        <WeatherForecast coordinates={weatherData.coordinates} />
+      </div>
+    );
+  } else {
+    search();
+    return "Loading...";
+  }
 }
