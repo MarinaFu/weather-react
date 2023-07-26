@@ -18,6 +18,7 @@ export default function Weather() {
       <div className="page">
         <div className="card top-card">
           <div className="card-body">
+            <Search />
             <ul className="current-details">
               <li>Last updated: {weatherData.date}</li>
             </ul>
@@ -35,7 +36,6 @@ export default function Weather() {
                 <li>{weatherData.description}</li>
               </ul>
             </h5>
-            <search />
           </div>
         </div>
       </div>
