@@ -4,7 +4,7 @@ import axios from "axios";
 
 export default function Search() {
   let [city, setCity] = useState("");
-  let [message, setMessage] = useState("");
+  let [searchResult, setsearchResult] = useState("");
 
   function handleSubmit(response) {
     let weather = {
@@ -14,7 +14,7 @@ export default function Search() {
       humidity: response.data.temperature.humidity,
       icon: response.data.condition.icon_url,
     };
-    setMessage(
+    setsearchResult(
       <ul>
         <li>Temperature: {weather.temperature}°C</li>
         <li>Description: {weather.description} </li>
@@ -48,7 +48,7 @@ export default function Search() {
         />
         <input type="submit" value="Search" />
       </form>
-      <h2>{message}</h2>
+      <h2>{searchResult}</h2>
     </div>
   );
 }
