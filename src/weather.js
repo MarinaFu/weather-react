@@ -35,6 +35,7 @@ export default function Weather() {
                 <li>{weatherData.description}</li>
               </ul>
             </h5>
+            <search />
           </div>
         </div>
       </div>
