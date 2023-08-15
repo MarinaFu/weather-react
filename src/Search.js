@@ -7,6 +7,7 @@ export default function Search() {
       <form>
         <input type="search" />
         <input type="submit" value="Search" />
+        <input type="submit" value="Current" />
       </form>
     </div>
   );
