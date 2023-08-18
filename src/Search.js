@@ -7,15 +7,21 @@ export default function Search() {
   return (
     <Container className="mt-5">
       <Form>
-        <Form.Group controlId="searchInput">
-          <Form.Control type="search" placeholder="Search" />
-        </Form.Group>
-        <Button variant="primary" type="submit">
-          Search
-        </Button>
-        <Button variant="secondary" type="submit">
-          Current
-        </Button>
+        <div className="row">
+          <div className="col-9">
+            <Form.Group controlId="searchInput">
+              <Form.Control type="search" placeholder="Enter City" />
+            </Form.Group>
+          </div>
+          <div className="col-3">
+            <Button variant="primary" type="submit">
+              Search
+            </Button>
+            <Button variant="secondary" type="submit">
+              Current
+            </Button>
+          </div>
+        </div>
       </Form>
     </Container>
   );

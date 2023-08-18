@@ -8,20 +8,25 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
-      <Cities />
-      <Search />
-      <Temperature city="Amsterdam" />
-      <Forecast />
-      <footer>
-        <a
-          href="https://github.com/MarinaFu/weather-app"
-          id="github-link"
-          className="github-link"
-        >
-          Open-source code
-        </a>
-        by Marina Furlic
-      </footer>
+      <div className="container">
+        <div className="border">
+          <Cities />
+          <Search />
+          <Temperature city="Amsterdam" />
+          <Forecast />
+        </div>
+        <footer>
+          <a
+            href="https://github.com/MarinaFu/weather-react"
+            id="github-link"
+            className="github-link"
+            target="_blank"
+          >
+            Open-source code
+          </a>{" "}
+          by Marina Furlic
+        </footer>
+      </div>
     </div>
   );
 }

@@ -15,24 +15,30 @@ export default function Temperature(props) {
     <div className="Temperature">
       <h3>Today 22/04/2023</h3>
       <h1>{props.city}</h1>
-
-      <i className="fa-solid fa-cloud top-cloud">
-        <div className="forecastImage">
-          <ReactAnimatedWeather
-            icon="CLOUDY"
-            color="#000"
-            size={48}
-            animate={true}
-          />{" "}
+      <div className="row">
+        <div className="col-6">
+          <div className="forecastImage">
+            <ReactAnimatedWeather
+              icon="CLOUDY"
+              color="#000"
+              size={48}
+              animate={true}
+            />{" "}
+          </div>
+          {Math.round(temperature)}{" "}
+          <span className="units">
+            {" "}
+            ° C │ <a href="/">° F</a>
+          </span>
         </div>
-        {Math.round(temperature)}{" "}
-        <span className="units">
-          {" "}
-          ° C │ <a href="/">° F</a>
-        </span>
-      </i>
-      <h4>Cloudy</h4>
-      <h5>Humidity: 65% Wind: strong</h5>
+        <div className="col-6">
+          <ul>
+            <li>Cloudy</li>
+            <li>Humidity: 65% </li>
+            <li>Wind: strong</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
