@@ -1,4 +1,5 @@
 import React from "react";
+import ReactAnimatedWeather from "react-animated-weather";
 import "./Forecast.css";
 
 export default function Forecast() {
@@ -11,10 +12,11 @@ export default function Forecast() {
         </div>
         <div className="second">
           {" "}
-          <img
-            src="https://openweathermap.org/img/wn/04d@2x.png"
-            alt=""
-            width="42"
+          <ReactAnimatedWeather
+            icon="CLEAR_DAY"
+            color="#000"
+            size={42}
+            animate={true}
           />
         </div>
         <div className="third">
@@ -29,10 +31,11 @@ export default function Forecast() {
         </div>
         <div className="second">
           {" "}
-          <img
-            src="https://openweathermap.org/img/wn/10d@2x.png"
-            alt=""
-            width="42"
+          <ReactAnimatedWeather
+            icon="CLEAR_DAY"
+            color="#000"
+            size={42}
+            animate={true}
           />
         </div>
         <div className="third">
@@ -47,10 +50,11 @@ export default function Forecast() {
         </div>
         <div className="second">
           {" "}
-          <img
-            src="https://openweathermap.org/img/wn/01d@2x.png"
-            alt=""
-            width="42"
+          <ReactAnimatedWeather
+            icon="CLEAR_DAY"
+            color="#000"
+            size={42}
+            animate={true}
           />
         </div>
         <div className="third">
@@ -65,10 +69,11 @@ export default function Forecast() {
         </div>
         <div className="second">
           {" "}
-          <img
-            src="https://openweathermap.org/img/wn/03d@2x.png"
-            alt=""
-            width="42"
+          <ReactAnimatedWeather
+            icon="CLEAR_DAY"
+            color="#000"
+            size={42}
+            animate={true}
           />
         </div>
         <div className="third">
@@ -83,10 +88,11 @@ export default function Forecast() {
         </div>
         <div className="second">
           {" "}
-          <img
-            src="https://openweathermap.org/img/wn/10d@2x.png"
-            alt=""
-            width="42"
+          <ReactAnimatedWeather
+            icon="CLEAR_DAY"
+            color="#000"
+            size={42}
+            animate={true}
           />
         </div>
         <div className="third">
@@ -101,10 +107,11 @@ export default function Forecast() {
         </div>
         <div className="second">
           {" "}
-          <img
-            src="https://openweathermap.org/img/wn/04d@2x.png"
-            alt=""
-            width="42"
+          <ReactAnimatedWeather
+            icon="CLEAR_DAY"
+            color="#000"
+            size={42}
+            animate={true}
           />
         </div>
         <div className="third">

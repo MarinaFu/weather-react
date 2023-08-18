@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import ReactAnimatedWeather from "react-animated-weather";
 import "./Temperature.css";
 
 export default function Temperature(props) {
@@ -17,12 +18,12 @@ export default function Temperature(props) {
 
       <i className="fa-solid fa-cloud top-cloud">
         <div className="forecastImage">
-          {" "}
-          <img
-            src="https://openweathermap.org/img/wn/04d@2x.png"
-            alt=""
-            width="100"
-          />
+          <ReactAnimatedWeather
+            icon="CLOUDY"
+            color="#000"
+            size={48}
+            animate={true}
+          />{" "}
         </div>
         {Math.round(temperature)}{" "}
         <span className="units">
