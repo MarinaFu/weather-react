@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import Cities from "./Cities";
 import Search from "./Search";
 import Temperature from "./Temperature";

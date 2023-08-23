@@ -1,23 +1,36 @@
 import React from "react";
+import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 import { Container, Form, Button } from "react-bootstrap";
 import "./Search.css";
 
 export default function Search() {
   return (
-    <Container className="mt-5">
+    <Container className="mt-2">
       <Form>
         <div className="row">
-          <div className="col-9">
+          <div className="col-8">
             <Form.Group controlId="searchInput">
-              <Form.Control type="search" placeholder="Enter City" />
+              <Form.Control
+                type="search"
+                placeholder="Enter City"
+                autoFocus="on"
+              />
             </Form.Group>
           </div>
-          <div className="col-3">
-            <Button variant="primary" type="submit">
+          <div className="col-4">
+            <Button
+              value="Search"
+              type="submit"
+              className="btn btn-primary mr-2"
+            >
               Search
             </Button>
-            <Button variant="secondary" type="submit">
+            <Button
+              value="Search"
+              type="submit"
+              className="btn btn-secondary ml-2"
+            >
               Current
             </Button>
           </div>

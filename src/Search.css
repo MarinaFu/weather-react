@@ -1,5 +1,8 @@
 .Search form {
   margin: 0 auto;
   text-align: center;
-  margin: 30px;
+  margin: 15px;
+}
+.Search {
+  padding: 16px;
 }
