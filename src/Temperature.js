@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import TodayDate from "./TodayDate";
 import axios from "axios";
 import ReactAnimatedWeather from "react-animated-weather";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -14,7 +15,7 @@ export default function Temperature(props) {
       wind: response.data.wind.speed,
       city: response.data.name,
       precipitation: response.data.weather[0].description,
-      date: "Today 22/04/2023",
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -22,7 +23,10 @@ export default function Temperature(props) {
     return (
       <div className="Temperature">
         <h1>{weatherData.city}</h1>
-        <h3>{weatherData.date}</h3>
+        <h3>
+          {" "}
+          <TodayDate date={weatherData.date} />
+        </h3>
         <div className="row">
           <div className="col-6">
             <div className="forecastImage">
