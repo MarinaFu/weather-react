@@ -3,7 +3,6 @@ import React from "react";
 import TodayDate from "./TodayDate";
 import "./Temperature.css";
 
-import "bootstrap/dist/css/bootstrap.min.css";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {

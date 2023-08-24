@@ -3,7 +3,6 @@ import "./Search.css";
 import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./Temperature.css";
 
 export default function Temperature(props) {
