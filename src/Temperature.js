@@ -5,6 +5,7 @@ import axios from "axios";
 import ReactAnimatedWeather from "react-animated-weather";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Temperature.css";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Temperature(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -18,6 +19,7 @@ export default function Temperature(props) {
       city: response.data.name,
       precipitation: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
+      icon: response.data.weather[0].icon,
     });
   }
 

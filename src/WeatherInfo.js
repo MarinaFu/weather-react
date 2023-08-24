@@ -4,6 +4,7 @@ import TodayDate from "./TodayDate";
 import "./Temperature.css";
 import ReactAnimatedWeather from "react-animated-weather";
 import "bootstrap/dist/css/bootstrap.min.css";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
   return (
@@ -16,12 +17,7 @@ export default function WeatherInfo(props) {
       <div className="row">
         <div className="col-6">
           <div className="forecastImage">
-            <ReactAnimatedWeather
-              icon="CLOUDY"
-              color="#000"
-              size={60}
-              animate={true}
-            />{" "}
+            <WeatherIcon code={props.data.icon} />{" "}
             <span className="temp">{Math.round(props.data.temperature)}</span>{" "}
             <span className="units">
               {" "}
