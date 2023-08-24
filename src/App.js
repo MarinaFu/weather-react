@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Cities from "./Cities";
-import Search from "./Search";
+
 import Temperature from "./Temperature";
 import Forecast from "./Forecast";
 import "./App.css";
@@ -12,8 +12,8 @@ export default function App() {
       <div className="container">
         <div className="border">
           <Cities />
-          <Search />
-          <Temperature city="Amsterdam" />
+
+          <Temperature defaultCity="Amsterdam" />
           <Forecast />
         </div>
         <footer>

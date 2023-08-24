@@ -1,4 +1,4 @@
-.Temperature {
+.WeatherInfo {
   padding: 16px;
 }
 
@@ -9,7 +9,7 @@
   margin: 0 auto;
 }
 
-.Temperature h1 {
+.WeatherInfo h1 {
   color: #878787;
   margin: 10px 0 0 0;
   font-size: 24px;
@@ -17,29 +17,29 @@
   line-height: 29px;
 }
 
-.Temperature h3 {
+.WeatherInfo h3 {
   font-size: 16px;
 }
-.Temperature ul {
+.WeatherInfo ul {
   margin: 0;
   padding: 0;
 }
 
-.Temperature li {
+.WeatherInfo li {
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
   list-style: none;
 }
 
-.Temperature .temp {
+.WeatherInfo .temp {
   font-weight: bold;
   color: rgb(33, 33, 33);
   font-size: 64px;
   font-weight: 400;
   margin-left: 10px;
 }
-.Temperature .units {
+.WeatherInfo .units {
   color: rgb(33, 33, 33);
   font-size: 16px;
   font-weight: 400;
