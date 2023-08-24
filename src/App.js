@@ -1,5 +1,6 @@
 import React from "react";
-import axios from "axios";
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+
 import Cities from "./Cities";
 
 import Temperature from "./Temperature";
@@ -22,6 +23,7 @@ export default function App() {
             id="github-link"
             className="github-link"
             target="_blank"
+            rel="noreferrer"
           >
             Open-source code
           </a>{" "}

@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import "./Search.css";
 import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
-import ReactAnimatedWeather from "react-animated-weather";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Temperature.css";
-import WeatherIcon from "./WeatherIcon";
 
 export default function Temperature(props) {
   const [city, setCity] = useState(props.defaultCity);

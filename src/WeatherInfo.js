@@ -1,8 +1,8 @@
 import React from "react";
-import axios from "axios";
+
 import TodayDate from "./TodayDate";
 import "./Temperature.css";
-import ReactAnimatedWeather from "react-animated-weather";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import WeatherIcon from "./WeatherIcon";
 
