@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 import Cities from "./Cities";
 
 import Temperature from "./Temperature";
-import Forecast from "./Forecast";
+
 import "./App.css";
 
 export default function App() {
@@ -15,7 +15,6 @@ export default function App() {
           <Cities />
 
           <Temperature defaultCity="Amsterdam" />
-          <Forecast />
         </div>
         <footer>
           <a

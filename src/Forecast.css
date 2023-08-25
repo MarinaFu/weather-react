@@ -1,9 +1,7 @@
-.Forecast h2 {
+.Forecast {
   text-align: center;
 }
 
 .Forecast .row {
-  display: block;
-  padding: 16px;
-  margin: 0 auto;
+  margin-left: 20px;
 }
