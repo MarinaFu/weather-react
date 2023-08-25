@@ -5,3 +5,16 @@
 .Forecast .row {
   margin-left: 20px;
 }
+
+.min {
+  opacity: 0.6;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.first,
+.second,
+.third {
+  margin-left: 5px;
+  text-align: center;
+}

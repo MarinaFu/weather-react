@@ -14,7 +14,72 @@ export default function Forecast() {
           </div>
           <div className="second">
             {" "}
-            <WeatherIcon code="01d" />
+            <WeatherIcon code="01d" size={36} />
+          </div>
+          <div className="third">
+            <span className="min">16°</span> <span className="max">26°</span>
+          </div>
+        </div>{" "}
+        <div className="col">
+          <div className="first">
+            {" "}
+            <p> Fri </p>{" "}
+          </div>
+          <div className="second">
+            {" "}
+            <WeatherIcon code="01d" size={36} />
+          </div>
+          <div className="third">
+            <span className="min">16°</span> <span className="max">26°</span>
+          </div>
+        </div>{" "}
+        <div className="col">
+          <div className="first">
+            {" "}
+            <p> Fri </p>{" "}
+          </div>
+          <div className="second">
+            {" "}
+            <WeatherIcon code="01d" size={36} />
+          </div>
+          <div className="third">
+            <span className="min">16°</span> <span className="max">26°</span>
+          </div>
+        </div>{" "}
+        <div className="col">
+          <div className="first">
+            {" "}
+            <p> Fri </p>{" "}
+          </div>
+          <div className="second">
+            {" "}
+            <WeatherIcon code="01d" size={36} />
+          </div>
+          <div className="third">
+            <span className="min">16°</span> <span className="max">26°</span>
+          </div>
+        </div>{" "}
+        <div className="col">
+          <div className="first">
+            {" "}
+            <p> Fri </p>{" "}
+          </div>
+          <div className="second">
+            {" "}
+            <WeatherIcon code="01d" size={36} />
+          </div>
+          <div className="third">
+            <span className="min">16°</span> <span className="max">26°</span>
+          </div>
+        </div>{" "}
+        <div className="col">
+          <div className="first">
+            {" "}
+            <p> Fri </p>{" "}
+          </div>
+          <div className="second">
+            {" "}
+            <WeatherIcon code="01d" size={36} />
           </div>
           <div className="third">
             <span className="min">16°</span> <span className="max">26°</span>
