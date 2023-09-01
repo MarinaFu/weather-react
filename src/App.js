@@ -1,8 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 
-import Cities from "./Cities";
-
 import Temperature from "./Temperature";
 
 import "./App.css";
@@ -12,8 +10,6 @@ export default function App() {
     <div className="App">
       <div className="container">
         <div className="border">
-          <Cities />
-
           <Temperature defaultCity="Amsterdam" />
         </div>
         <footer>
